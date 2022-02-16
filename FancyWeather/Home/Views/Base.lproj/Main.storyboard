@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Weather View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WeatherViewController" customModule="FancyWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="search for City" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ero-vT-BG3">
+                                <rect key="frame" x="57" y="68" width="300" height="34"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="mVc-dA-fs2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rld-xA-9YI">
+                                <rect key="frame" x="311.5" y="71" width="45.5" height="31"/>
+                                <color key="tintColor" red="0.14901961389999999" green="0.2588235438" blue="0.27843138579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gq8-s0-IkH">
+                                <rect key="frame" x="249" y="112" width="165" height="102"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="tintColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" red="0.14901961389999999" green="0.2588235438" blue="0.27843138579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sun.max" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wiR-lW-wBP">
+                                <rect key="frame" x="280" y="207" width="114" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.14901961389999999" green="0.2588235438" blue="0.27843138579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahA-oe-3Kg">
+                                <rect key="frame" x="326" y="317" width="68" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.14901961389999999" green="0.2588235438" blue="0.27843138579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAk-e9-NDT">
+                                <rect key="frame" x="20" y="528" width="84" height="33"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="27"/>
+                                <color key="textColor" red="0.14901961389999999" green="0.2588235438" blue="0.27843138579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F6v-Mn-uqJ">
+                                <rect key="frame" x="20" y="571" width="374" height="301"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="HGn-nT-Xnz"/>
+                                    <constraint firstAttribute="height" constant="301" id="dTA-1N-4fk"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="4ii-ut-tzL" kind="embed" id="La0-Vc-brv"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rld-xA-9YI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="1ak-60-MER"/>
+                            <constraint firstAttribute="bottom" secondItem="F6v-Mn-uqJ" secondAttribute="bottom" constant="24" id="FBv-iB-R2f"/>
+                            <constraint firstItem="ero-vT-BG3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MEb-X4-tde"/>
+                            <constraint firstItem="ero-vT-BG3" firstAttribute="bottom" secondItem="rld-xA-9YI" secondAttribute="bottom" id="NTn-hT-2tP"/>
+                            <constraint firstItem="F6v-Mn-uqJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T5j-EF-68O"/>
+                            <constraint firstItem="ero-vT-BG3" firstAttribute="trailing" secondItem="rld-xA-9YI" secondAttribute="trailing" id="WpU-po-yP3"/>
+                            <constraint firstItem="iAk-e9-NDT" firstAttribute="leading" secondItem="F6v-Mn-uqJ" secondAttribute="leading" id="bin-gC-otf"/>
+                            <constraint firstItem="F6v-Mn-uqJ" firstAttribute="top" secondItem="iAk-e9-NDT" secondAttribute="bottom" constant="10" id="fit-9Y-S9u"/>
+                            <constraint firstItem="ero-vT-BG3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="mMw-xC-BgC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cityLabel" destination="gq8-s0-IkH" id="haM-Cx-Y4V"/>
+                        <outlet property="searchBar" destination="ero-vT-BG3" id="OkV-1K-U9E"/>
+                        <outlet property="searchBtn" destination="rld-xA-9YI" id="bci-dd-GeX"/>
+                        <outlet property="tempretureLabel" destination="ahA-oe-3Kg" id="HoL-z8-zd1"/>
+                        <outlet property="weatherConditionImageView" destination="wiR-lW-wBP" id="fL4-XR-zly"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="34.821428571428569"/>
+        </scene>
+        <!--History View Controller-->
+        <scene sceneID="lCe-ED-CTI">
+            <objects>
+                <viewController id="4ii-ut-tzL" customClass="HistoryViewController" customModule="FancyWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mbL-nq-aI2">
+                        <rect key="frame" x="0.0" y="0.0" width="374" height="301"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Glt-5F-EDz">
+                                <rect key="frame" x="2" y="2" width="370" height="297"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Z6H-aR-peC"/>
+                        <constraints>
+                            <constraint firstItem="Glt-5F-EDz" firstAttribute="leading" secondItem="mbL-nq-aI2" secondAttribute="leading" constant="2" id="7CH-zN-MHF"/>
+                            <constraint firstItem="Glt-5F-EDz" firstAttribute="top" secondItem="mbL-nq-aI2" secondAttribute="top" constant="2" id="AuS-Pd-wxF"/>
+                            <constraint firstAttribute="trailing" secondItem="Glt-5F-EDz" secondAttribute="trailing" constant="2" id="QmJ-Ao-uWe"/>
+                            <constraint firstAttribute="bottom" secondItem="Glt-5F-EDz" secondAttribute="bottom" constant="2" id="n6F-fy-HvM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Glt-5F-EDz" id="RtI-9K-dlX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4sA-lx-MoT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="925" y="219"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="sun.max" catalog="system" width="128" height="124"/>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
